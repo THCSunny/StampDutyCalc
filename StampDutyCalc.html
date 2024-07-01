@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>印花税计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>印花税计算器</h1>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="propertyPrice">物业价格 (£):</label>
+                <input type="number" id="propertyPrice" name="propertyPrice" required>
+            </div>
+
+            <div class="form-group">
+                <label for="buyerType">买家类别:</label>
+                <select id="buyerType" name="buyerType">
+                    <option value="firstTimeBuyer">首次置业</option>
+                    <option value="homeMover">置换房产</option>
+                    <option value="additionalProperty">第二套房产</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="residencyStatus">居民身份:</label>
+                <select id="residencyStatus" name="residencyStatus">
+                    <option value="ukResident">英国居民</option>
+                    <option value="nonUkResident">非英国居民</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="calculateStampDuty()">计算</button>
+        </form>
+
+        <h2>印花税: £<span id="stampDuty">0.00</span></h2>
+        <h2>税点: <span id="effectiveRate">0.00%</span></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
